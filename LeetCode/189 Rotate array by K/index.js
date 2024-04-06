@@ -44,5 +44,10 @@ var bruteForce2 = function (nums, k) {
 const nums = [1, 2, 3, 4, 5, 6, 7];
 const k = 3;
 
-// console.log(bruteForce1(nums, k));
-console.log(bruteForce2(nums, k));
+console.log(
+  "Orignal Array:",
+  nums.map((x) => x)
+);
+
+// console.log("Rotated Array: ", bruteForce1(nums, k));
+console.log("Rotated Array: ", bruteForce2(nums, k));
