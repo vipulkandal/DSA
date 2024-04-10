@@ -1,11 +1,14 @@
-const bruteForce = (nums, k) => {
+const bruteForce = (nums) => {
   return "bruteForce";
 };
 
-const main = (nums, k) => {
-  return bruteForce(nums, k);
+const main = (nums) => {
+  return bruteForce(nums);
 };
 
 const nums = [1, 2, 3, 4, 5, 6, 7];
-k = 3;
-console.log(main(nums, k));
+console.log(
+  "Orignal Array: ",
+  nums.map((x) => x)
+);
+console.log("Final: ", main(nums));
