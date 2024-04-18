@@ -17,6 +17,8 @@
  * If the maximum sum of elements seen so far including the current element is less than or equal to 0, we know that the maximum sum of elements
  * seen so far including the current element will never be greater than 0, so we reset the prefix sum to 0 to avoid unnecessary computations.
  *
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 const KadaneAlgorithm = (nums) => {
   // prefix represents the maximum sum of elements seen so far, including the current element
