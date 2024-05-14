@@ -1,7 +1,14 @@
 {
-    "files.associations": {
-        "iostream": "cpp",
-        "algorithm": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
+  "files.associations": {
+    "iostream": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp",
+    "valarray": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
