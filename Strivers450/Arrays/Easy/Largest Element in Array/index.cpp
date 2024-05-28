@@ -21,6 +21,6 @@ int main()
 {
     vector<int> nums = {1, 8, 7, 56, 90};
     int result = largestElement(nums);
-    cout << result;
+    cout << "The largest element in the array is: " << result;
     return 0;
 }
