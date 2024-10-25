@@ -41,6 +41,28 @@ var bruteForce2 = function (nums, k) {
   return nums;
 };
 
+const leftRotateUsingTempArr = (arr, arrayNeedsToRotateBy) => {
+  const arrSize = arr.length;
+  const rotateBy = arrayNeedsToRotateBy % arrSize;
+  let temp = [];
+  for (let i = 0; i < rotateBy; i++) {
+    temp[i] = arr[i];
+  }
+
+  let swapIndex = 0;
+  for (let j = rotateBy; j < arrSize; j++) {
+    arr[swapIndex] = arr[j];
+    swapIndex++;
+  }
+
+  let tempSwapIndex = arrSize - rotateBy;
+  for (let k = 0; k < temp.length; k++) {
+    arr[tempSwapIndex] = temp[k];
+    tempSwapIndex++;
+  }
+  return arr;
+};
+
 const nums = [1, 2, 3, 4, 5, 6, 7];
 const k = 3;
 
@@ -51,3 +73,4 @@ console.log(
 
 // console.log("Rotated Array: ", bruteForce1(nums, k));
 console.log("Rotated Array: ", bruteForce2(nums, k));
+// console.log("Rotated Array: ", leftRotateUsingTempArr(nums, k));

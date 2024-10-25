@@ -97,3 +97,36 @@ console.log(
   nums.map((x) => x)
 );
 console.log("Final: ", twoSum(nums, target));
+
+
+//---------------------------------
+// var twoSum = function (nums, target) {
+//   let numMaps = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     let complement = target - nums[i];
+//     if (complement in numMaps) return [numMaps[complement], i];
+//     else numMaps[nums[i]] = i;
+//   }
+
+//   return [];
+// };
+
+// console.log(twoSum([3,3], 6));
+
+
+//-----------------------------------------------------
+// var twoSum = function (nums, target) {
+//   const map = new Map();
+//   for (let i = 0; i < nums.length; i++) {
+//     map.set(nums[i], i);
+//   }
+//   for (let i = 0; i < nums.length; i++) {
+//     const complement = target - nums[i];
+//     if (map.has(complement) && map.get(complement) !== i) {
+//       return [i, map.get(complement)];
+//     }
+//   }
+//   // If no valid pair is found, return an empty array
+//   return [];
+// };
+// console.log(twoSum([3,3], 6));
