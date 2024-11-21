@@ -20,7 +20,7 @@ const moveZerosToEnd = (arr) => {
     //       in the end arr will return with last element 0.
     for (let i = lastZeroIndex + 1; i < arr.length; i++) {
         if (arr[i] !== 0) {
-            [arr[i], arr[lastZeroIndex]] = [arr[lastZeroIndex], arr[i]];
+            [arr[i], arr[lastZeroIndex]] = [arr[lastZeroIndex], arr[i]]; // swap
             lastZeroIndex++;
         }
     }
