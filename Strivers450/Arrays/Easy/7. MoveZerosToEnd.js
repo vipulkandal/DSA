@@ -27,5 +27,5 @@ const moveZerosToEnd = (arr) => {
 
   return arr;
 };
-let arr = [2, 2, 5, 8, 0];
+let arr = [1, 0, 2, 3, 0, 4, 0, 1];
 console.log("Result: ", moveZerosToEnd(arr));
