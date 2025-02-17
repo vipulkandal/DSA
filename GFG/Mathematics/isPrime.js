@@ -1,3 +1,5 @@
+// Time Complexity: O(sqrt(n))
+// Auxiliary space: O(1)
 const isPrimeBruteForce = (num) => {
   if (num < 2) return false; // Handle numbers less than 2
 
@@ -10,6 +12,13 @@ const isPrimeBruteForce = (num) => {
   return true;
 };
 
+// to deal with large size input we will deal with a few numbers such as 1, 2, 3, and the numbers
+// which are divisible by 2 and 3 in separate cases and for remaining numbers,
+// we will iterate our loop from 5 to sqrt(n) and check for each iteration whether that  (iteration) or (that iteration + 2) divides n or not.
+// If we find any number that divides, we return false.
+//
+// Time complexity: O(sqrt(n))
+// Auxiliary space: O(1)
 const isPrimeEfficient = (num) => {
   if (num < 2) return false; // Handle numbers less than 2
   if (num === 2 || num === 3) return true; // 2 and 3 are prime
