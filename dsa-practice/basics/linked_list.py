@@ -180,6 +180,41 @@ class LinkedList:
         self.length -= 1
         return temp
 
+    def get(self, index):
+        """
+        Return the value at a given index in the linked list.
+
+        PSEUDOCODE:
+        1. If index is out of bounds (index < 0 or index >= length):
+            - Return None
+        2. Start from head
+        3. Initialize counter = 0
+        4. Traverse the list:
+            - If counter == index, return current node. For value print(get(2).value)
+            - Move to next node
+            - Increment counter
+        5. If index not found, return None
+        """
+
+        # Edge case: invalid index
+        if index < 0 or index >= self.length:
+            return None
+
+        temp = self.head
+        count = 0
+
+        # Traverse from head
+        while temp:
+            if count == index:
+                return temp
+
+            temp = temp.next
+            count += 1
+
+        # Index not found (safety fallback)
+        return None
+
+
 
 # =========================
 # Example Usage
@@ -190,5 +225,6 @@ ll.append(30)
 ll.append(40)
 
 ll.print_list()
-ll.prepend(11111)
+print("Get value is ", ll.get(0))
+
 ll.print_list()
